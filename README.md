@@ -1,5 +1,33 @@
 # NgxDevUtils
 
+## Install
+
+These are development utilities, and you will probably not want to include them in the production application.
+```bash
+npm install ngx-dev-utils --save-dev
+```
+
+## Setup
+
+Import the ```NgxDevUtilsModule``` into your AppModule
+
+  ```Javascript
+  import { NgxDevUtilsModule } from "ngx-dev-utils";
+
+  ...
+
+
+  @NgModule({
+    declarations: [],    
+    imports: [    
+      NgxDevUtilsModule
+    ],
+    providers: [],
+    bootstrap: []
+  })
+  export class AppModule { }
+  ```
+
 ## About
 
 This is a small library that will provide some helpful modules with components/pipes/directives that could be useful for developing Angular applications.
@@ -32,3 +60,28 @@ Given an object like:
 the rendering would look like:
 
 ![alt text](https://github.com/barryrowe/ngx-dev-utils/raw/master/docs/example-render.png "Example PrettyObjectComponent Render")
+
+#### Usage
+
+Selector: 'adu-pretty-object'
+
+Inputs:  [obj]: any 
+
+```Javascript
+@Component({
+  template:`
+    <h1>My Template</h1>
+    <adu-pretty-object [obj]="myObject"></adu-pretty-object>
+  `
+})
+export class ExampleComponent(){
+  public myObject:any = {
+    name:"Your Name",
+    data: {
+      type:"Sub Object",
+      number: 1,
+      details: ["a", "b", "c"]
+    }
+  }
+}
+```
