@@ -1,31 +1,34 @@
 # NgxDevUtils
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
+## About
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This is a small library that will provide some helpful modules with components/pipes/directives that could be useful for developing Angular applications.
 
-## Code scaffolding
+## Components
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+### PrettyObjectComponent
 
-## Build
+This is a component that will render out any object with its properties in a format that is easier to read than the ```json``` pipe.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Given an object like:
 
-## Running unit tests
+```Javascript
+{
+    name:"Barry",
+    hobbies: ["code", "boardgames", "soccer", "hiking"],
+    profession: {
+      title:"Software Developer",
+      company:"Roaring Cat Games",
+      industry: "Game Development",
+      project: {
+        name:"GalaxSeed",
+        genres:["Mobile", "Arcade", "Shooter"]
+      }
+    }
+  };
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
 
-## Running end-to-end tests
+the rendering would look like:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Deploying to GitHub Pages
-
-Run `ng github-pages:deploy` to deploy to GitHub Pages.
-
-## Further help
-
-To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+![alt text](https://github.com/barryrowe/ngx-dev-utils/raw/master/docs/example-render.png "Example PrettyObjectComponent Render")
