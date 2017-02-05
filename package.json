@@ -7,9 +7,10 @@
     "cleanup": "rimraf src/**/*.ngsummary.json src/**/*.ngfactory.ts dist/bundles dist",
     "transpile": "ngc",
     "package": "rollup -c",
-    "copy": "copyfiles README.md publish.package.json dist && renamer --find publish.package.json --replace package.json 'dist/publish.package.json'",
+    "rename":"renamer --find publish.package.json --replace package.json dist/publish.package.json",
+    "copy": "copyfiles README.md publish.package.json dist",    
     "minify": "uglifyjs dist/bundles/ngxdevutils.umd.js --screw-ie8 --mangle --comments --output dist/bundles/ngxdevutils.umd.min.js",
-    "build": "npm run transpile && npm run package && npm run minify && npm run copy",
+    "build": "npm run transpile && npm run package && npm run minify && npm run copy && npm run rename",
     "clean:build": "npm run cleanup && npm run build"
   },
   "private": true,
