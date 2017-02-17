@@ -1,6 +1,6 @@
 {
   "name": "ngx-dev-utils",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A set of modules that help when developing Angular applications.",
   "main": "bundles/ngxdevutils.umd.js",
   "module": "index.js",
