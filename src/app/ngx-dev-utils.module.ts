@@ -8,9 +8,9 @@ import { PrettyObjectComponent } from './components/pretty-object.component';
     PrettyObjectComponent
   ],
   imports: [
-    CommonModule    
+    CommonModule
   ],
-  exports:[
+  exports: [
     PrettyObjectComponent
   ],
   providers: [],

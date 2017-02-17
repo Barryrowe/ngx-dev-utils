@@ -63,7 +63,7 @@ the rendering would look like:
 
 #### Usage
 
-Selector: 'adu-pretty-object'
+Selector: 'ndu-pretty-object'
 
 Inputs:  [obj]: any 
 
@@ -71,7 +71,7 @@ Inputs:  [obj]: any
 @Component({
   template:`
     <h1>My Template</h1>
-    <adu-pretty-object [obj]="myObject"></adu-pretty-object>
+    <ndu-pretty-object [obj]="myObject"></ndu-pretty-object>
   `
 })
 export class ExampleComponent(){
